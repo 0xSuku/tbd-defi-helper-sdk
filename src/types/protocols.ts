@@ -4,7 +4,7 @@ import { GmxStakeDepositInfoBase, GmxVestDepositInfoBase } from '../protocols/en
 import { QiDaoFarmVaultDepositInfo } from '../protocols/entities/qidao';
 import { TokenAmount, TokenDetails } from './tokens';
 
-declare type ProtocolItem = {
+export interface ProtocolItem {
     pool: TokenDetails[];
     balance: TokenAmount[];
     rewards?: TokenAmount[];
@@ -12,32 +12,17 @@ declare type ProtocolItem = {
     address: string;
 }
 
-declare type ProtocolInfo = {
+export interface ProtocolInfo {
     items?: ProtocolItem[];
     type: ProtocolTypes;
 }
 
-declare type Protocol = {
+export interface Protocol {
     info: ProtocolInfo[];
     symbol: Protocols;
     chainId: ChainId;
     name: string;
 }
 
-declare type ContractStaticInfo = {
-    abi: Record<string, any>[];
-    address: string;
-    params?: string[];
-    name: string;
-    protocol: Protocols;
-    type: ProtocolTypes;
-    chainId: ChainId;
-    tokenDetail: TokenDetails;
-    tokensDetailRewards: TokenDetails[];
-    hidden?: boolean;
-    extraAddresses?: string[];
-    extraABIs?: string[];
-}
-
-declare type GmxProtocolDeposit = GmxStakeDepositInfoBase | GmxVestDepositInfoBase;
-declare type QiDaoProtocolDeposit = QiDaoFarmVaultDepositInfo;
+export declare type GmxProtocolDeposit = GmxStakeDepositInfoBase | GmxVestDepositInfoBase;
+export declare type QiDaoProtocolDeposit = QiDaoFarmVaultDepositInfo;

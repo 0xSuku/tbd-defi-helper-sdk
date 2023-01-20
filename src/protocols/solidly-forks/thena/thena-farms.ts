@@ -1,7 +1,7 @@
 import { Token } from "@uniswap/sdk-core";
 import { ChainId } from "../../../chains";
 import { TokenTypes } from "../../../constants/token";
-import { ThenaGaugeV2DepositInfo } from "../../entities/solidly";
+import { SolidlyGaugeV2DepositInfoBase, ThenaGaugeV2DepositInfo } from "../../entities/solidly";
 
 const sAMM_UsdcBusd = new ThenaGaugeV2DepositInfo({
     name: 'USDC-BUSD Gauge',
@@ -28,7 +28,7 @@ const sAMM_MaiBusd = new ThenaGaugeV2DepositInfo({
     }
 });
 
-const solidlyDeposits: ThenaGaugeV2DepositInfo[] = [
+const solidlyDeposits: SolidlyGaugeV2DepositInfoBase[] = [
     sAMM_UsdcBusd,
     sAMM_HayBusd,
     sAMM_MaiBusd
