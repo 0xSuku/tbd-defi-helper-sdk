@@ -23,6 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tokens = exports.Chains = void 0;
 const chains = __importStar(require("./chains"));
-exports.default = { chains };
+const tokens_1 = require("./tokens");
+exports.Chains = chains;
+exports.Tokens = tokens_1.Tokens;
 //# sourceMappingURL=index.js.map
