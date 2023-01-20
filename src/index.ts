@@ -1,3 +1,6 @@
 import * as chains from "./chains";
+import { Tokens as _Tokens } from "./tokens";
 
-export default { chains };
+
+export const Chains = chains;
+export const Tokens = _Tokens;
