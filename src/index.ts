@@ -1,8 +1,8 @@
 import { ChainId, getProvider, getReadContract, getWriteContract } from "./chains";
-import { Tokens } from "./tokens";
+import { Tokens as Tokens_ } from "./tokens";
 
-export default {
-    Tokens,
+export const Tokens = Tokens_;
+export const Chains = {
     ChainId,
     getProvider,
     getReadContract,
