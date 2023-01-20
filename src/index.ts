@@ -1,6 +1,10 @@
-import * as chains from "./chains";
-import { Tokens as _Tokens } from "./tokens";
+import { ChainId, getProvider, getReadContract, getWriteContract } from "./chains";
+import { Tokens } from "./tokens";
 
-
-export const Chains = chains;
-export const Tokens = _Tokens;
+export default {
+    Tokens,
+    ChainId,
+    getProvider,
+    getReadContract,
+    getWriteContract,
+}

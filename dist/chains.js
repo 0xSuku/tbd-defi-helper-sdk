@@ -9,19 +9,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getWriteContract = exports.getReadContract = exports.getProvider = exports.ChainId = exports.RPC_METIS = exports.RPC_ARBITRUM = exports.RPC_OPTIMISM = exports.RPC_AVALANCHE = exports.RPC_FTM = exports.RPC_MILKOMEDA = exports.RPC_GNOSIS = exports.RPC_BSC = exports.RPC_POLYGON = exports.RPC_ETHEREUM = void 0;
+exports.getWriteContract = exports.getReadContract = exports.getProvider = exports.ChainId = void 0;
 const ethers_1 = require("ethers");
 require("dotenv/config");
-exports.RPC_ETHEREUM = process.env.RPC_ETHEREUM;
-exports.RPC_POLYGON = process.env.RPC_POLYGON;
-exports.RPC_BSC = process.env.RPC_BSC;
-exports.RPC_GNOSIS = process.env.RPC_GNOSIS;
-exports.RPC_MILKOMEDA = process.env.RPC_MILKOMEDA;
-exports.RPC_FTM = process.env.RPC_FTM;
-exports.RPC_AVALANCHE = process.env.RPC_AVALANCHE;
-exports.RPC_OPTIMISM = process.env.RPC_OPTIMISM;
-exports.RPC_ARBITRUM = process.env.RPC_ARBITRUM;
-exports.RPC_METIS = process.env.RPC_METIS;
+const RPC_ETHEREUM = process.env.RPC_ETHEREUM;
+const RPC_POLYGON = process.env.RPC_POLYGON;
+const RPC_BSC = process.env.RPC_BSC;
+const RPC_GNOSIS = process.env.RPC_GNOSIS;
+const RPC_MILKOMEDA = process.env.RPC_MILKOMEDA;
+const RPC_FTM = process.env.RPC_FTM;
+const RPC_AVALANCHE = process.env.RPC_AVALANCHE;
+const RPC_OPTIMISM = process.env.RPC_OPTIMISM;
+const RPC_ARBITRUM = process.env.RPC_ARBITRUM;
+const RPC_METIS = process.env.RPC_METIS;
 var ChainId;
 (function (ChainId) {
     ChainId[ChainId["Ethereum"] = 1] = "Ethereum";
@@ -38,25 +38,25 @@ var ChainId;
 function getProvider(chainId) {
     switch (chainId) {
         case ChainId.Ethereum:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_ETHEREUM);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_ETHEREUM);
         case ChainId.Optimism:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_OPTIMISM);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_OPTIMISM);
         case ChainId.BNB:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_BSC);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_BSC);
         case ChainId.Gnosis:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_GNOSIS);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_GNOSIS);
         case ChainId.Polygon:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_POLYGON);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_POLYGON);
         case ChainId.Fantom:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_FTM);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_FTM);
         case ChainId.Metis:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_METIS);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_METIS);
         case ChainId.Milkomeda:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_MILKOMEDA);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_MILKOMEDA);
         case ChainId.Arbitrum:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_ARBITRUM);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_ARBITRUM);
         case ChainId.Avalanche:
-            return ethers_1.ethers.providers.getDefaultProvider(exports.RPC_AVALANCHE);
+            return ethers_1.ethers.providers.getDefaultProvider(RPC_AVALANCHE);
         default:
             throw new Error('Provider not implemented');
     }
